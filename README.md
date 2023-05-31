@@ -2,14 +2,12 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Express Version](https://img.shields.io/badge/Express-4.17.1-red)
-![Mongoose Version](https://img.shields.io/badge/Mongoose-5.12.0-brown)
+![Sequelize Version](https://img.shields.io/badge/Sequelize-6.31.1-blue)
 ![Node Version](https://img.shields.io/badge/Node-14.16.0-green)
 ![Axios Version](https://img.shields.io/badge/Axios-0.21.1-white)
 ![Bcrypt Version](https://img.shields.io/badge/Bcrypt-5.0.1-yellow)
 ![Cors Version](https://img.shields.io/badge/Cors-2.8.5-pink)
 ![Dotenv Version](https://img.shields.io/badge/Dotenv-8.2.0-yellowgreen)
-![Passport Version](https://img.shields.io/badge/Passport-0.4.1-redgreen)
-![Passport-Local Version](https://img.shields.io/badge/Passport--Local-1.0.0-blueviolet)
 ![Path Version](https://img.shields.io/badge/Path-0.12.7-lightblue)
 
 MeG's Wishlist Backend is the server-side of a comprehensive personal safety
@@ -49,9 +47,7 @@ Here are the main libraries used in this project:
 - [Cors](https://www.npmjs.com/package/cors)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
 - [Express](https://expressjs.com/)
-- [Mongoose](https://mongoosejs.com/)
-- [Passport](http://www.passportjs.org/)
-- [Passport-Local](http://www.passportjs.org/packages/passport-local/)
+- [Sequelize](https://sequelize.org)
 - [Path](https://www.npmjs.com/package/path)
 
 ## Contributors
