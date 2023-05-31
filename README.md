@@ -1,4 +1,4 @@
-# MeG's Wishlist Backend
+# My E Guardian : MEG
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Express Version](https://img.shields.io/badge/Express-4.17.1-red)
