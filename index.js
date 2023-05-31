@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 require("./config/passport")(passport);
 const path = require("path");
+const routes = require("./controllers");
 
 // Middleware
 app.use(express.json());
@@ -16,6 +17,8 @@ app.use(passport.session());
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(routes);
 
 // start server
 app.listen(PORT, () => {
