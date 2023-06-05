@@ -26,7 +26,7 @@ User.init(
       },
     },
     number: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [10, 10],
@@ -44,14 +44,6 @@ User.init(
       allowNull: true,
       validate: {
         len: [1, 100],
-      },
-    },
-    emergencyContacts: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      references: {
-        model: "emergencyContact",
-        key: "id",
       },
     },
   },

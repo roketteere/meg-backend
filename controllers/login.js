@@ -1,14 +1,15 @@
 const router = require("express").Router();
+const UserDemo = require("../models/UserDemo");
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    const login = await UserDemo.findOne({ where: { email: email } });
     res.status(200).json({
       message: "Success!",
       body: {
-        email: email,
-        password: password,
+        email: login.email,
+        password: login.password,
       },
     });
   } catch (err) {

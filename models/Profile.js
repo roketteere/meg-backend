@@ -3,15 +3,17 @@ const { sequelize } = require("../config");
 
 class Profile extends Model {}
 
-Profile.init({
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    first_name: {
-      type: DataTypes.STRING,
+Profile.init(
+  {
+    user_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      validate: {
-        len: [1, 20],
+      first_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1, 20],
+        },
       },
     },
     last_name: {
@@ -57,6 +59,13 @@ Profile.init({
       },
     },
   },
-});
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "profile",
+  }
+);
 
 module.exports = Profile;
