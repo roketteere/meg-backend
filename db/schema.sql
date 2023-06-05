@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS `meg_db`;
+DROP DATABASE IF EXISTS `mymegsqldb`;
 
-CREATE DATABASE `meg_db`;
+CREATE DATABASE `mymegsqldb`;
