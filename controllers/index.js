@@ -11,4 +11,8 @@ router.get("/", (req, res) => {
   }
 });
 
+router.use("/login", login);
+router.use("/logout", logout);
+router.use("/signup", signup);
+
 module.exports = router;

@@ -5,7 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const path = require("path");
 const routes = require("./controllers");
-
+const { sequelize } = require("./config");
 
 // Middleware
 app.use(express.json());
@@ -18,6 +18,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // start server
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 });

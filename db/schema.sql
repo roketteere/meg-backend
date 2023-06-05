@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS `meg_db`;
+
+CREATE DATABASE `meg_db`;
