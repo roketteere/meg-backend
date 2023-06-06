@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e html,js,css,md,jsx,ts,ignore,json "
+    "start":"node index.js",
+    "node": "nodemon -e html,js,css,md,jsx,ts,ignore,json "
   },
   "keywords": [],
   "author": "",
