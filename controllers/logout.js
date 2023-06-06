@@ -1,6 +1,5 @@
-const router = require("express").Router();
 
-router.post("/", (req, res) => {
+const logout = (req, res, next) =>{
   try {
     res.status(200).json({
       message: "Logout success!",
@@ -12,5 +11,8 @@ router.post("/", (req, res) => {
       err: err,
     });
   }
-});
-module.exports = router;
+}
+
+module.exports = {
+  logout,
+};
