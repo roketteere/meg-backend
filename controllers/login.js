@@ -17,13 +17,9 @@ router.post("/", async (req, res) => {
         message: "Password Invalid",
       });
     } else {
-      req.session.loggedIn = true;
-      req.session.user = login.email.toLowerCase();
       console.log({
         email: login.email,
         password: login.password,
-        loggedIn: req.session.loggedIn,
-        user: req.session.user,
       });
 
       res.status(200).json({
@@ -31,8 +27,6 @@ router.post("/", async (req, res) => {
         body: {
           email: login.email,
           password: login.password,
-          loggedIn: req.session.loggedIn,
-          user: req.session.user,
         },
       });
     }
