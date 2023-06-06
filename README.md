@@ -9,6 +9,7 @@
 ![Cors Version](https://img.shields.io/badge/Cors-2.8.5-pink)
 ![Dotenv Version](https://img.shields.io/badge/Dotenv-8.2.0-yellowgreen)
 ![Path Version](https://img.shields.io/badge/Path-0.12.7-lightblue)
+![Express-Session Version](https://img.shields.io/badge/Express--Session-1.17.2-lightgrey)
 
 MeG's Wishlist Backend is the server-side of a comprehensive personal safety
 application.
@@ -52,10 +53,10 @@ Here are the main libraries used in this project:
 
 ## Contributors
 
--   Joel P. [Github Roketteere](https://github.com/roketteere/) 
--   George H. [Github geholst](https://github.com/Geholst/) 
--   Heather K. [Github miss-heather](https://github.com/miss-heather/) 
--   Cody T. [Github codyt93](https://github.com/codyt93/)
+- Joel P. [Github Roketteere](https://github.com/roketteere/)
+- George H. [Github geholst](https://github.com/Geholst/)
+- Heather K. [Github miss-heather](https://github.com/miss-heather/)
+- Cody T. [Github codyt93](https://github.com/codyt93/)
 
 ## Contributing
 
