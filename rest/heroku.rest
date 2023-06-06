@@ -1,0 +1,26 @@
+GET https://meg-backend.herokuapp.com
+
+###
+
+
+POST  https://meg-backend.herokuapp.com/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "megmeg@mail.com",
+    "password": "megmegpasss"
+}
+
+###
+
+POST  https://meg-backend.herokuapp.com/logout HTTP/1.1
+
+###
+
+POST  https://meg-backend.herokuapp.com/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email": "megmeg@mail.com",
+    "password": "megmegpasss"
+}
