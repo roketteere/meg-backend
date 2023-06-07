@@ -7,8 +7,8 @@ POST  https://meg-backend.herokuapp.com/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "newonet@mail.com",
-    "password": "newonenewone"
+    "email": "roketteere@gmail.com",
+    "password": "password123"
 }
 
 ###
@@ -23,7 +23,7 @@ content-type: application/json
 {
     "firstName":"jwt",
     "lastName":"twj",
-    "email": "techyrican@gmail.com",
+    "email": "roketteere@gmail.com",
     "password": "password123",
      "number":1112229876,
      "allergies":"none",
