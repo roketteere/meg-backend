@@ -1,7 +1,9 @@
 const router = require("express").Router();
+const jwt = require("jsonwebtoken");
 
 router.post("/", async (req, res) => {
   try {
+    
     res.status(200).json({
       message: "Logout success!",
     });

@@ -5,9 +5,13 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 router.get("/", async (req, res) => {
+  // req.headers.authorization?.split(" ")[1];
+  // \? means optional chaining (if the value is null or undefined, the expression short-circuits with a return value of undefined)
+  const jwtToken = req.headers.authorization?.split(" ")[1];
   try {
+    const verified = jwt.verify(jwtToken, process.env.SESSION_SECRET);
     res.status(200).json({
-      params: req.headers,
+      Token_Authorized: verified,
     });
   } catch (err) {
     res.status(500).json({

@@ -4,16 +4,6 @@ const UserDemo = require("../models/UserDemo");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-// TOKEN
-// {
-//   "message": "Success!",
-//   "body": {
-//     "email": "newemail@mail.com",
-//     "password": "$2b$04$2Qofpjgs5yZdnelO5Pg0Q.6GP3Zm93YNMRoRIUHF9b5s.wwAmP.8u",
-//     "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODYwOTEwOTcsImV4cCI6MTY4NjA5NDY5N30.TWwagf3HAOrXyXtwc17rPlOCmNwuGcexx4gr_N_i7kk"
-//   }
-// }
-
 router.post("/", async (req, res) => {
   try {
     const { email, password } = req.body;

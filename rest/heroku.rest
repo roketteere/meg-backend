@@ -24,3 +24,9 @@ content-type: application/json
     "email": "newonet@mail.com",
     "password": "newonenewone"
 }
+
+###
+
+GET  http://127.0.0.1:3001/profile HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld2VtYWlsQG1haWwuY29tIiwidXNlcklkIjoyLCJpYXQiOjE2ODYwOTMxMTQsImV4cCI6MTY4NjEwMzkxNH0.FOMvMvlBv6cgkBY7rat5VNaKx2IKbMjAznb2aHpjyNw

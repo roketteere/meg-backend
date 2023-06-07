@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { UserDemo } = require("../models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 router.post("/", async (req, res) => {
   try {
@@ -13,8 +14,8 @@ router.post("/", async (req, res) => {
     });
     const jwtToken = jwt.sign(
       {
-        email: login.email,
-        userId: login.id,
+        email: newDemoUser.email,
+        userId: newDemoUser.id,
       },
       process.env.SESSION_SECRET,
       {
