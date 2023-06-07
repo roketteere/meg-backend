@@ -10,6 +10,7 @@
 ![Dotenv Version](https://img.shields.io/badge/Dotenv-8.2.0-yellowgreen)
 ![Path Version](https://img.shields.io/badge/Path-0.12.7-lightblue)
 ![Express-Session Version](https://img.shields.io/badge/Express--Session-1.17.2-lightgrey)
+![JSON Web Token Version](https://img.shields.io/badge/JSON%20Web%20Token-8.5.1-orange)
 
 MeG's Wishlist Backend is the server-side of a comprehensive personal safety
 application.

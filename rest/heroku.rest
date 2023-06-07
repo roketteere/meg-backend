@@ -21,8 +21,13 @@ POST  https://meg-backend.herokuapp.com/signup HTTP/1.1
 content-type: application/json
 
 {
-    "email": "jwttest@mail.com",
-    "password": "jwttest123"
+    "firstName":"jwt",
+    "lastName":"twj",
+    "email": "techyrican@gmail.com",
+    "password": "password123",
+     "number":1112229876,
+     "allergies":"none",
+     "preferredHospital":"University of Washington Medical Center"
 }
 
 ###
