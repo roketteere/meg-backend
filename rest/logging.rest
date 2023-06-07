@@ -2,12 +2,16 @@ GET http://127.0.0.1:3001/
 
 ###
 
+GET http://127.0.0.1:3001/api/users HTTP/1.1
+
+###
+
 POST  http://127.0.0.1:3001/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "jwtjwt1@mail.com",
-    "password": "jwtjwt123"
+    "email": "techyrican@gmail.com",
+    "password": "password123"
 }
 
 ###
@@ -19,7 +23,11 @@ POST  http://127.0.0.1:3001/logout HTTP/1.1
 POST  http://127.0.0.1:3001/signup HTTP/1.1
 content-type: application/json
 
-{
-    "email": "jwtjwt1@mail.com",
-    "password": "jwtjwt123"
+{   "firstName":"jwt",
+    "lastName":"twj",
+    "email": "techyrican@gmail.com",
+    "password": "password123",
+     "number":1112229876,
+     "allergies":"none",
+     "preferredHospital":"University of Washington Medical Center"
 }

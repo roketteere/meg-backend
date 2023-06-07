@@ -21,12 +21,12 @@ POST  https://meg-backend.herokuapp.com/signup HTTP/1.1
 content-type: application/json
 
 {
-    "email": "newonet@mail.com",
-    "password": "newonenewone"
+    "email": "jwttest@mail.com",
+    "password": "jwttest123"
 }
 
 ###
 
-GET  http://127.0.0.1:3001/profile HTTP/1.1
+GET  https://meg-backend.herokuapp.com/profile HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld2VtYWlsQG1haWwuY29tIiwidXNlcklkIjoyLCJpYXQiOjE2ODYwOTMxMTQsImV4cCI6MTY4NjEwMzkxNH0.FOMvMvlBv6cgkBY7rat5VNaKx2IKbMjAznb2aHpjyNw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp3dHRlc3RAbWFpbC5jb20iLCJ1c2VySWQiOjcsImlhdCI6MTY4NjA5Nzc1OSwiZXhwIjoxNjg2MTA4NTU5fQ.ZsEX_r10xXwzy1VMNpAlcEFZywX0ESdk0TSU4PTR1io

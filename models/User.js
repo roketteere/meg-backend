@@ -25,8 +25,17 @@ User.init(
         len: [1, 20],
       },
     },
-    number: {
+    email: {
       type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    number: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [10, 10],
@@ -46,17 +55,24 @@ User.init(
         len: [1, 100],
       },
     },
+    contacts: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1, 100],
+      },
+    },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.password = await bcrypt.hash(newUserData.password, 3);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(
           updatedUserData.password,
-          10
+          3
         );
         return updatedUserData;
       },

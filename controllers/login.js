@@ -1,19 +1,22 @@
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
-const UserDemo = require("../models/UserDemo");
+const { User, EmergencyContact, Experience, Journey } = require("../models");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 router.post("/", async (req, res) => {
   try {
     const { email, password } = req.body;
-    const login = await UserDemo.findOne({ where: { email: email } });
+    const login = await User.findOne({
+      where: { email: email },
+      include: [Experience, Journey, EmergencyContact],
+    });
     if (!login) {
       res.status(400).json({
         message: "Email Not Found",
       });
     }
-    const validPassword = await bcrypt.compare(password, login.password);
+    const validPassword = login.checkPassword(password);
     if (!validPassword) {
       res.status(400).json({
         message: "Password Invalid",
@@ -54,3 +57,21 @@ router.post("/", async (req, res) => {
 });
 
 module.exports = router;
+
+// HTTP/1.1 200 OK
+// X-Powered-By: Express
+// Access-Control-Allow-Origin: *
+// Content-Type: application/json; charset=utf-8
+// Content-Length: 336
+// ETag: W/"150-XPRapsO/UgQc1hK2gQd937DnvM4"
+// Date: Wed, 07 Jun 2023 18:23:21 GMT
+// Connection: close
+
+// {
+//   "message": "Signup Success!",
+//   "New_User": {
+//     "email": "jxp489@gmail.com",
+//     "password": "$2b$10$WAwYvE3tDwqf94X3vUawo.vRlou5RjzZLIzPQabPYHlDKXiKVfwG.",
+//     "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp4cDQ4OUBnbWFpbC5jb20iLCJ1c2VySWQiOjIsImlhdCI6MTY4NjE2MjIwMSwiZXhwIjoxNjg2MTczMDAxfQ.E98pA-HRrk2EgffQScduyPd1QdICWqCx7c9ZSMxWmzA"
+//   }
+// }

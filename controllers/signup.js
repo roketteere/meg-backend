@@ -1,35 +1,48 @@
 const router = require("express").Router();
-const { UserDemo } = require("../models");
+const { User } = require("../models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 router.post("/", async (req, res) => {
   try {
-    const { email, password } = req.body;
-    let passwordHash = await bcrypt.hash(password, 3);
-    const newDemoUser = await UserDemo.create({
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      number,
+      allergies,
+      preferredHospital,
+    } = req.body;
+    // let passwordHash = await bcrypt.hash(password, 3);
+    const newUser = await User.create({
+      firstName: firstName,
+      lastName: lastName,
       email: email,
-      password: passwordHash,
+      password: password,
+      number: number,
+      allergies: allergies,
+      preferredHospital: preferredHospital,
     });
     const jwtToken = jwt.sign(
       {
-        email: newDemoUser.email,
-        userId: newDemoUser.id,
+        email: newUser.email,
+        userId: newUser.id,
       },
       process.env.SESSION_SECRET,
       {
         expiresIn: "3h",
       }
     );
-    console.log(`New User Created: ${newDemoUser}
+    console.log(`New User Created: ${newUser}
     jwtToken: ${jwtToken}
     `);
     res.status(200).json({
       message: "Signup Success!",
       New_User: {
-        email: newDemoUser.email,
-        password: newDemoUser.password,
+        email: newUser.email,
+        password: newUser.password,
         jwtToken: jwtToken,
       },
     });

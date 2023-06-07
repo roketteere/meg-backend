@@ -1,0 +1,10 @@
+POST  http://127.0.0.1:3001/api/journey HTTP/1.1
+content-type: application/json
+
+{
+    "userId": 1,
+    "type": "dinner date",
+    "details": "dinner date with my wife",
+    "endTime":"2020-12-12T12:00:00",
+    "route":"Left Right Up Down"
+}

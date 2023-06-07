@@ -1,24 +1,42 @@
 const User = require("./User");
-const UserDemo = require("./UserDemo");
-const Profile = require("./Profile");
 const Rating = require("./Rating");
 const Journey = require("./Journey");
 const Experience = require("./Experience");
 const EmergencyContact = require("./EmergencyContact");
 
-// User.hasOne(Profile, {
-//   foreignKey: "user_id",
-//   onDelete: "CASCADE",
-// });
+User.hasMany(Journey, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
 
-// Profile.belongsTo(User, {
-//   foreignKey: "user_id",
-// });
+Journey.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Rating.belongsTo(Journey, {
+  foreignKey: "journey_id",
+});
+
+Experience.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(EmergencyContact, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+EmergencyContact.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(Experience, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
 
 module.exports = {
   User,
-  Profile,
-  UserDemo,
   Rating,
   Journey,
   Experience,

@@ -5,29 +5,26 @@ class Rating extends Model {}
 
 Rating.init(
   {
-    userId: {
+    journeyId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "User",
+        model: "journey",
         key: "id",
       },
-      journeyId: {
-        type: DataTypes.INTEGER,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1, 5],
       },
-      rating: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1, 5],
-        },
-      },
-      comments: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 100],
-        },
+    },
+    comments: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
       },
     },
   },

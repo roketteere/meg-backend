@@ -5,12 +5,6 @@ class Journey extends Model {}
 
 Journey.init(
   {
-    journeyId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,

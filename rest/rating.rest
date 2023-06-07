@@ -1,0 +1,10 @@
+POST  http://127.0.0.1:3001/api/rating HTTP/1.1
+content-type: application/json
+
+{
+    "userId": 1,
+    "journeyId":1,
+    "rating": 5,
+    "comments": "Great rating!"
+
+}
