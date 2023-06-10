@@ -35,14 +35,15 @@ router.post("/", async (req, res) => {
         expiresIn: "3h",
       }
     );
-    console.log(`New User Created: ${newUser}
-    jwtToken: ${jwtToken}
-    `);
+    // console.log(`New User Created: ${newUser}
+    // jwtToken: ${jwtToken}
+    // `);
     res.status(200).json({
       message: "Signup Success!",
       New_User: {
+        userId: newUser.id,
         email: newUser.email,
-        password: newUser.password,
+        // password: newUser.password,
         jwtToken: jwtToken,
       },
     });

@@ -32,17 +32,18 @@ router.post("/", async (req, res) => {
           expiresIn: "3h",
         }
       );
-      console.log({
-        email: login.email,
-        password: login.password,
-        jwtToken: jwtToken,
-      });
+      // console.log({
+      //   email: login.email,
+      //   // password: login.password,
+      //   // jwtToken: jwtToken,
+      // });
 
       res.status(200).json({
         message: "Success!",
         body: {
+          userId: login.id,
           email: login.email,
-          password: login.password,
+          // password: login.password,
           jwtToken: jwtToken,
         },
       });

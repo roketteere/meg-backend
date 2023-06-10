@@ -11,6 +11,7 @@ const client = require("twilio")(accountSid, authToken, {
 const sampleText =
   "Hello this is Joel from My E-Guardian App. I am sending you this message to let you know that your loved one has left the house. !!! MEG SMS DEMO TEST !!!";
 async function sendText(message, from, to) {
+  // const coords = localStorage.getItem("checkItems");
   await client.messages
     .create({
       body: message,
@@ -19,8 +20,9 @@ async function sendText(message, from, to) {
     })
     .then((message) => console.log(message));
 }
+
 sendText(
-  sampleText,
+  "Hey this is just a Saturday",
   process.env.TWILIO_FROM_NUMBER,
   process.env.TWILIO_TO_NUMBER
 );

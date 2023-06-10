@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 router.post("/", async (req, res) => {
   try {
-    
+    // localStorage.removeItem("token");
     res.status(200).json({
       message: "Logout success!",
     });
