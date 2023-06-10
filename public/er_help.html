@@ -39,12 +39,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+   <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Root</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/user_help.html">User / Signup</a>
+            <a class="nav-link" href="/user_help.html">User</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login_help.html">Login </a>
@@ -73,9 +73,19 @@
     <div>
       <h2 class="m-2 p2">Welcome to the MEG App Back End</h2>
     </div>
-    <pre class="bg-light p-2"><span class="text-primary">/</span></pre>
-    <h3>Root Level</h3>
-    <pre class="bg-light p-2">
-       <span class="text-success">No Content & No Body</span></pre>
+    <div class="container">
+      <h1>Emergency Route Info</h1>
+      <pre
+        class="bg-light p-2"><span class="text-primary">POST /api/emergency</span></pre>
+      <h3>Required Body</h3>
+      <pre class="bg-light p-2">
+        <span class="text-warning">{</span>
+          <span class="text-success">"userId"</span>: <span class="text-success">"number/integer"</span>,
+          <span class="text-success">"name"</span>: <span class="text-success">"string"</span>,
+          <span class="text-success">"number"</span>: <span class="text-success">"string"</span>,
+          <span class="text-success">"relationship"</span>: <span class="text-success">"string"</span>
+        <span class="text-warning">}</span>
+      </pre>
+    </div>
   </body>
 </html>

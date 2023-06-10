@@ -47,10 +47,10 @@
             <a class="nav-link" href="/user_help.html">User / Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login_help.html">Login </a>
+            <a class="nav-link" href="/login_help.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout_help.html"> Logout</a>
+            <a class="nav-link" href="/logout_help.html">Logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/signup_help.html">SignUp</a>
@@ -73,9 +73,19 @@
     <div>
       <h2 class="m-2 p2">Welcome to the MEG App Back End</h2>
     </div>
-    <pre class="bg-light p-2"><span class="text-primary">/</span></pre>
-    <h3>Root Level</h3>
-    <pre class="bg-light p-2">
-       <span class="text-success">No Content & No Body</span></pre>
+    <div class="container">
+      <h1>Rating Route Info</h1>
+      <pre
+        class="bg-light p-2"><span class="text-primary">POST /api/rating</span></pre>
+      <h3>Required Body</h3>
+      <pre class="bg-light p-2">
+        <span class="text-warning">{</span>
+          <span class="text-success">"userId"</span>: <span class="text-success">"number/integer"</span>,
+          <span class="text-success">"journeyId"</span>: <span class="text-success">"number/integer"</span>,
+          <span class="text-success">"rating"</span>: <span class="text-success">"number/integer"</span>,
+          <span class="text-success">"comments"</span>: <span class="text-success">"string"</span>
+        <span class="text-warning">}</span>
+      </pre>
+    </div>
   </body>
 </html>
