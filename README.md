@@ -23,8 +23,11 @@ managed efficiently. The server has been developed with Express and data is
 managed by Sequelize interacting with a MySQL database.
 
 ## Screenshot
+<img width="1484" alt="Screenshot 2023-06-10 at 4 00 06 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/41f5e42e-3d3c-43cf-a76e-b250719a09df">
+<img width="1487" alt="Screenshot 2023-06-10 at 3 59 56 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/52612006-6444-4d51-8297-6d30e0ea495a">
+<img width="1501" alt="Screenshot 2023-06-10 at 3 59 43 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/449a027a-f5d6-4e49-92ae-d0c5e7c54006">
+<img width="1499" alt="Screenshot 2023-06-10 at 3 59 32 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/949e7858-db29-4f4d-a378-993e12694ad5">
 
-<img width="1174" alt="Screenshot 2023-06-08 at 2 38 21 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/42db21e0-2b50-461a-928f-44df8cdaa63b">
 
 ## Installation
 
