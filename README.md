@@ -24,6 +24,10 @@ The backend of MeG's Wishlist ensures that all the data is stored, accessed, and
 managed efficiently. The server has been developed with Express and data is
 managed by Mongoose interacting with a MongoDB database.
 
+## Screenshot
+<img width="1174" alt="Screenshot 2023-06-08 at 2 38 21 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/42db21e0-2b50-461a-928f-44df8cdaa63b">
+
+
 ## Installation
 
 To install the dependencies, run the following command:
