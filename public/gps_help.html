@@ -39,7 +39,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Root</a>
           </li>
@@ -52,6 +52,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/logout_help.html"> Logout</a>
           </li>
+  
           <li class="nav-item">
             <a class="nav-link" href="/er_help.html">Emergency</a>
           </li>
@@ -62,10 +63,10 @@
             <a class="nav-link" href="/experience_help.html">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/rating_help.html">Rating</a>
+            <a class="nav-link" href="/rating_help.html">Rating</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/gps_help.html">GPS</a>
+            <a class="nav-link active" href="/gps_help.html">GPS</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="/sms_help.html"
@@ -77,22 +78,58 @@
         </ul>
       </div>
     </nav>
+    <h3>Try It:</h3>
+      <button type="button"><a href="/maps.html" target="_blank" rel="noopener noreferrer">GET GPS Location</a></button>
+
     <div>
       <h2 class="m-2 p2">Welcome to the MEG App Back End</h2>
     </div>
     <div class="container">
-      <h1>Rating Route Info</h1>
-      <pre
-        class="bg-light p-2"><span class="text-primary">POST /api/rating</span></pre>
-      <h3>Required Body</h3>
+      <h1>GPS Route Info</h1>
+      <h3>Code Description:</h3>
       <pre class="bg-light p-2">
-        <span class="text-warning">{</span>
-          <span class="text-success">"userId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"journeyId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"rating"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"comments"</span>: <span class="text-success">"string"</span>
-        <span class="text-warning">}</span>
+let map;
+let longitude;
+let latitude;
+let radius = 30;
+
+// Get the user's location using the Geolocation API
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+} else {
+  console.log("Geolocation is not supported by this browser.");
+}
+
+function successCallback(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+
+  initMap();
+}
+
+function errorCallback(error) {
+  console.log("Error retrieving user's location:", error);
+}
+
+async function initMap() {
+  const { Map, Circle } = await google.maps.importLibrary("maps");
+  map = new Map(document.getElementById("map"), {
+    center: { lat: latitude, lng: longitude },
+    zoom: 19,
+  });
+  // Add a circle overlay to represent the radius
+  const circle = new Circle({
+    map,
+    center: { lat: latitude, lng: longitude },
+    radius: radius,
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#0000FF",
+    fillOpacity: 0.35,
+  });
+}
       </pre>
-    </div>
+      
   </body>
 </html>

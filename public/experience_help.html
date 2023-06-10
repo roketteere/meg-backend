@@ -5,29 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0,shrink-to-fit=no"
-    />
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <title>Meg Back End</title>
   </head>
   <body>
@@ -40,17 +35,16 @@
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Root</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/user_help.html">User</a>
+            <a class="nav-link" href="/user_help.html">User / Signup</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login_help.html">Login </a>
@@ -58,9 +52,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/logout_help.html"> Logout</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/signup_help.html">SignUp</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/er_help.html">Emergency</a>
           </li>
@@ -68,10 +60,21 @@
             <a class="nav-link" href="/journey_help.html">Journey</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/experience_help.html">Experience</a>
+            <a class="nav-link active" href="/experience_help.html"
+              >Experience</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/rating_help.html">Rating</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gps_help.html">GPS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sms_help.html">SMS_Twilio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth_help.html">Auth</a>
           </li>
         </ul>
       </div>
@@ -81,7 +84,8 @@
     </div>
     <div class="container">
       <h1>Experience Route Info</h1>
-      <pre class="bg-light p-2"><span class="text-primary">POST /api/experience</span></pre>
+      <pre
+        class="bg-light p-2"><span class="text-primary">POST /api/experience</span></pre>
       <h3>Required Body</h3>
       <pre class="bg-light p-2">
         <span class="text-warning">{</span>

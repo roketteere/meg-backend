@@ -39,7 +39,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Root</a>
           </li>
@@ -47,11 +47,12 @@
             <a class="nav-link" href="/user_help.html">User / Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login_help.html">Login </a>
+            <a class="nav-link" href="/login_help.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout_help.html"> Logout</a>
+            <a class="nav-link" href="/logout_help.html">Logout</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/er_help.html">Emergency</a>
           </li>
@@ -62,17 +63,16 @@
             <a class="nav-link" href="/experience_help.html">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/rating_help.html">Rating</a>
+            <a class="nav-link" href="/rating_help.html">Rating</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/gps_help.html">GPS</a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href="/sms_help.html"
-              >SMS_Twilio</a
-            >
-          </li><li class="nav-item">
-            <a class="nav-link" href="/auth_help.html">Auth</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/sms_help.html">SMS_Twilio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/auth_help.html">Auth</a>
           </li>
         </ul>
       </div>
@@ -81,18 +81,41 @@
       <h2 class="m-2 p2">Welcome to the MEG App Back End</h2>
     </div>
     <div class="container">
-      <h1>Rating Route Info</h1>
-      <pre
-        class="bg-light p-2"><span class="text-primary">POST /api/rating</span></pre>
-      <h3>Required Body</h3>
+      <h1>Auth Route Info</h1>
+      <h3>bcrypt and JWT Usage:</h3>
       <pre class="bg-light p-2">
-        <span class="text-warning">{</span>
-          <span class="text-success">"userId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"journeyId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"rating"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"comments"</span>: <span class="text-success">"string"</span>
-        <span class="text-warning">}</span>
+        <code>
+const validPassword = login.checkPassword(password);
+if (!validPassword) {
+  res.status(400).json({
+    message: "Password Invalid",
+  });
+} else {
+  const jwtToken = jwt.sign(
+    {
+      email: login.email,
+      userId: login.id,
+    },
+    process.env.SESSION_SECRET,
+    {
+      expiresIn: "3h",
+    }
+  );
+}
+        </code>
       </pre>
+      <h3>Description:</h3>
+      <p>
+        The above code snippet demonstrates how bcrypt and JWT (JSON Web Tokens)
+        are used for authentication and session management. First, the code
+        checks the validity of the provided password using the `checkPassword`
+        method of the `login` object. If the password is invalid, a 400 HTTP
+        status response is sent indicating the password is incorrect. If the
+        password is valid, a JWT token is generated using the `jwt.sign` method.
+        The JWT payload includes the user's email and ID for identification
+        purposes. The `process.env.SESSION_SECRET` is used as the secret key for
+        signing the JWT token. The token is set to expire after 3 hours.
+      </p>
     </div>
   </body>
 </html>

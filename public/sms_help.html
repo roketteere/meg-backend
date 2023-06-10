@@ -39,7 +39,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Root</a>
           </li>
@@ -47,10 +47,10 @@
             <a class="nav-link" href="/user_help.html">User / Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login_help.html">Login </a>
+            <a class="nav-link" href="/login_help.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout_help.html"> Logout</a>
+            <a class="nav-link" href="/logout_help.html">Logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/er_help.html">Emergency</a>
@@ -62,15 +62,13 @@
             <a class="nav-link" href="/experience_help.html">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/rating_help.html">Rating</a>
+            <a class="nav-link" href="/rating_help.html">Rating</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/gps_help.html">GPS</a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href="/sms_help.html"
-              >SMS_Twilio</a
-            >
+          <li class="nav-item">
+            <a class="nav-link active" href="/sms_help.html">SMS_Twilio</a>
           </li><li class="nav-item">
             <a class="nav-link" href="/auth_help.html">Auth</a>
           </li>
@@ -81,18 +79,54 @@
       <h2 class="m-2 p2">Welcome to the MEG App Back End</h2>
     </div>
     <div class="container">
-      <h1>Rating Route Info</h1>
-      <pre
-        class="bg-light p-2"><span class="text-primary">POST /api/rating</span></pre>
-      <h3>Required Body</h3>
+      <h1>SMS_Twilio Route Info</h1>
+      <h3>Code Description:</h3>
       <pre class="bg-light p-2">
-        <span class="text-warning">{</span>
-          <span class="text-success">"userId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"journeyId"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"rating"</span>: <span class="text-success">"number/integer"</span>,
-          <span class="text-success">"comments"</span>: <span class="text-success">"string"</span>
-        <span class="text-warning">}</span>
+<code>
+// Download the helper library from https://www.twilio.com/docs/node/install
+// Set environment variables for your credentials
+// Read more at http://twil.io/secure
+require("dotenv").config();
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require("twilio")(accountSid, authToken, {
+  username: accountSid,
+});
+
+const sampleText =
+  "Hello this is Joel from My E-Guardian App. I am sending you this message to let you know that your loved one has left the house. !!! MEG SMS DEMO TEST !!!";
+
+async function sendText(message, from, to) {
+  // const coords = localStorage.getItem("checkItems");
+  await client.messages
+    .create({
+      body: message,
+      from: from,
+      to: to,
+    })
+    .then((message) => console.log(message));
+}
+
+sendText(
+  "Hey this is just a Saturday",
+  process.env.TWILIO_FROM_NUMBER,
+  process.env.TWILIO_TO_NUMBER
+);
+</code>
       </pre>
+      <h3>Rendered Output:</h3>
+      <p>
+        The above code demonstrates how to use the Twilio API in Node.js to send
+        an SMS message. The code requires the Twilio helper library, and it uses
+        environment variables to store the account SID and auth token. The code
+        defines a function called `sendText` that takes the message content,
+        sender number, and recipient number as parameters. It uses the Twilio
+        client to create a new message with the specified details and sends it.
+        In the example, the function is called with sample text and the Twilio
+        phone numbers retrieved from the environment variables. The rendered
+        output will be the successful response object returned by the Twilio API
+        after sending the message.
+      </p>
     </div>
   </body>
 </html>
