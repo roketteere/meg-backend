@@ -11,6 +11,6 @@ router.use("/experience", experience);
 router.use("/journey", journey);
 router.use("/profile", profile);
 router.use("/rating", rating);
-router.use("/users", require("./users"));
+router.use("/users", users);
 
 module.exports = router;

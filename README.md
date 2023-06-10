@@ -4,7 +4,6 @@
 ![Express Version](https://img.shields.io/badge/Express-4.17.1-red)
 ![Sequelize Version](https://img.shields.io/badge/Sequelize-6.31.1-blue)
 ![Node Version](https://img.shields.io/badge/Node-14.16.0-green)
-![Axios Version](https://img.shields.io/badge/Axios-0.21.1-white)
 ![Bcrypt Version](https://img.shields.io/badge/Bcrypt-5.0.1-yellow)
 ![Cors Version](https://img.shields.io/badge/Cors-2.8.5-pink)
 ![Dotenv Version](https://img.shields.io/badge/Dotenv-8.2.0-yellowgreen)
@@ -15,18 +14,17 @@
 ![Twilio Version](https://img.shields.io/badge/Twilio-3.60.0-blueviolet)
 ![Nodemon Version](https://img.shields.io/badge/Nodemon-2.0.7-brightgreen)
 
-MeG's Wishlist Backend is the server-side of a comprehensive personal safety
-application.
+MeG Backend is the server-side of a comprehensive personal safety application.
 
 ## Description
 
-The backend of MeG's Wishlist ensures that all the data is stored, accessed, and
+The backend of My E-Guardian ensures that all the data is stored, accessed, and
 managed efficiently. The server has been developed with Express and data is
-managed by Mongoose interacting with a MongoDB database.
+managed by Sequelize interacting with a MySQL database.
 
 ## Screenshot
-<img width="1174" alt="Screenshot 2023-06-08 at 2 38 21 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/42db21e0-2b50-461a-928f-44df8cdaa63b">
 
+<img width="1174" alt="Screenshot 2023-06-08 at 2 38 21 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/42db21e0-2b50-461a-928f-44df8cdaa63b">
 
 ## Installation
 
@@ -51,7 +49,6 @@ in HTML, JS, CSS, MD, JSX, TS, ignore and JSON files.
 
 Here are the main libraries used in this project:
 
-- [Axios](https://github.com/axios/axios)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
 - [Cors](https://www.npmjs.com/package/cors)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
