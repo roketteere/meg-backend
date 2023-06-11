@@ -20,7 +20,7 @@ MeG Backend is the server-side of a comprehensive personal safety application.
 
 The backend of My E-Guardian ensures that all the data is stored, accessed, and
 managed efficiently. The server has been developed with Express and data is
-managed by Sequelize interacting with a MySQL database.
+managed by Sequelize interacting with a MySQL database. Backend is equipped with a dashboard with some details.
 
 ## Screenshot
 <img width="1484" alt="Screenshot 2023-06-10 at 4 00 06 PM" src="https://github.com/roketteere/meg-backend/assets/1593262/41f5e42e-3d3c-43cf-a76e-b250719a09df">
