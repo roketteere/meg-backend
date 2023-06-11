@@ -35,7 +35,7 @@ User.init(
       allowNull: false,
     },
     number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [10, 10],

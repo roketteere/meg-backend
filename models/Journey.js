@@ -32,7 +32,6 @@ Journey.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-
     endTime: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -43,6 +42,59 @@ Journey.init(
       validate: {
         len: [1, 100],
       },
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    licensePlate: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    color: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    year: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    make: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    model: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

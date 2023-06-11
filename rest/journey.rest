@@ -2,9 +2,18 @@ POST  http://127.0.0.1:3001/api/journey HTTP/1.1
 content-type: application/json
 
 {
-    "userId": 1,
-    "type": "dinner date",
-    "details": "dinner date with my wife",
-    "endTime":"2020-12-12T12:00:00",
-    "route":"Left Right Up Down"
-}
+          "userId": 1,
+          "type": "uber",
+          "details": "driving service",
+          "startTime": "10",
+          "endTime": "10",
+          "route": "asasd",
+          "name": "mike jones",
+          "username": "mikejones2200",
+          "licensePlate": "azaxaz",
+          "color": "blue",
+          "year": "2000",
+          "make": "Ford",
+          "model": "Fusion",
+          "image": null
+        }

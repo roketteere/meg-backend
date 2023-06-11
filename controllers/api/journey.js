@@ -4,6 +4,7 @@ const { Journey } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     const journeyData = await Journey.create(req.body);
+
     res.status(200).json(journeyData);
     // res.status(200).json(req.body);
   } catch (err) {
