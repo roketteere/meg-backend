@@ -8,7 +8,6 @@
 ![Cors Version](https://img.shields.io/badge/Cors-2.8.5-pink)
 ![Dotenv Version](https://img.shields.io/badge/Dotenv-8.2.0-yellowgreen)
 ![Path Version](https://img.shields.io/badge/Path-0.12.7-lightblue)
-![Express-Session Version](https://img.shields.io/badge/Express--Session-1.17.2-lightgrey)
 ![JSON Web Token Version](https://img.shields.io/badge/JSON%20Web%20Token-8.5.1-orange)
 ![Google Maps API Version](https://img.shields.io/badge/Google%20Maps%20API-3.43.3-blueviolet)
 ![Twilio Version](https://img.shields.io/badge/Twilio-3.60.0-blueviolet)
