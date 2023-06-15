@@ -24,4 +24,20 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.post("/get", async (req, res) => {
+  try {
+    const journeyData = await Journey.findAll({
+      where: {
+        user_id: req.body.user_id,
+      },
+    });
+    if (!journeyData) {
+      res.status(404).json({ message: "No journey found with this id!" });
+    }
+    res.status(200).json(journeyData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
