@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.post("/get", async (req, res) => {
   try {
     const emergencyData = await EmergencyContact.findAll({
       where: {
