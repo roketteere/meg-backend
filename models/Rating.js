@@ -14,6 +14,7 @@ Rating.init(
       },
     },
     ratingTitle: {
+      //added title to modal
       type: DataTypes.STRING,
       allowNull: false,
     },
