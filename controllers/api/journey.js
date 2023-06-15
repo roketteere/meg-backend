@@ -28,7 +28,7 @@ router.post("/get", async (req, res) => {
   try {
     const journeyData = await Journey.findAll({
       where: {
-        user_id: req.body.user_id,
+        userId: req.body.userId,
       },
     });
     if (!journeyData) {
