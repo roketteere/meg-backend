@@ -10,4 +10,21 @@ router.post("/", async (req, res) => {
   }
 });
 
+
+router.post("/get", async (req, res) => {
+  try {
+    const ratingData = await Rating.findAll({
+      where: {
+        userId: req.body.userId,
+      },
+    });
+    if (!ratingData) {
+      res.status(404).json({ message: "No Rating found with this id!" });
+    }
+    res.status(200).json(ratingData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;

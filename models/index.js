@@ -13,8 +13,13 @@ Journey.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Rating.belongsTo(Journey, {
-  foreignKey: "journey_id",
+User.hasMany(Rating, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+Rating.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
 Experience.belongsTo(User, {
